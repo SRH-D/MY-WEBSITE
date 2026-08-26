@@ -670,8 +670,646 @@ https://www.claudeusercontent.com/?domain=claude.ai&parentOrigin=https%3A%2F%2Fc
       <span>© 2026 Meridian Tackle Co.</span>
       <span>Millhaven, Wisconsin</span>
     </div>
+  </div> 
+
+</html>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RodCo — Premium Fishing Gear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Tokens ─────────────────────────────────────────── */
+    :root {
+      --bg:        #0a0a0a;
+      --surface:   #111111;
+      --border:    #1f1f1f;
+      --muted:     #2a2a2a;
+      --text:      #e8e8e8;
+      --sub:       #888888;
+      --accent:    #4fc3f7;
+      --accent2:   #00897b;
+      --danger:    #ef5350;
+      --radius:    4px;
+      --mono:      'Space Mono', monospace;
+      --sans:      'Space Grotesk', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── Nav ─────────────────────────────────────────────── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: var(--mono);
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav ul a {
+      color: var(--sub);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    nav ul a:hover { color: var(--text); }
+
+    /* ── Hero ─────────────────────────────────────────────── */
+    .hero {
+      padding: 6rem 2rem 5rem;
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 span { color: var(--accent); }
+
+    .hero p {
+      color: var(--sub);
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+      font-size: 1rem;
+    }
+
+    /* ── Section wrapper ─────────────────────────────────── */
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 0.6rem;
+    }
+
+    .section h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-sub {
+      color: var(--sub);
+      margin-bottom: 2.5rem;
+      max-width: 480px;
+    }
+
+    /* ── Forms shared ─────────────────────────────────────── */
+    .form-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.25rem 2rem;
+      max-width: 520px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.78rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--sub);
+      margin-bottom: 0.4rem;
+      margin-top: 1.1rem;
+    }
+
+    label:first-of-type { margin-top: 0; }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select {
+      width: 100%;
+      background: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 0.88rem;
+      padding: 0.65rem 0.85rem;
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+    }
+
+    input:focus, select:focus {
+      border-color: var(--accent);
+    }
+
+    input::placeholder { color: var(--sub); }
+
+    .row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--accent);
+      color: #0a0a0a;
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+      width: 100%;
+      margin-top: 1.4rem;
+    }
+
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+
+    .btn-pay {
+      background: var(--accent2);
+    }
+
+    /* ── Payment notice ───────────────────────────────────── */
+    .demo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--danger);
+      border: 1px solid var(--danger);
+      border-radius: 2px;
+      padding: 0.2rem 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-icons {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .card-icon {
+      background: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 0.2rem 0.45rem;
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      color: var(--sub);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Product Grid ─────────────────────────────────────── */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .product-card {
+      background: var(--surface);
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: background 0.2s;
+      cursor: default;
+    }
+
+    .product-card:hover { background: var(--muted); }
+
+    .product-img {
+      font-size: 2.4rem;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .product-tag {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent2);
+    }
+
+    .product-name {
+      font-size: 0.92rem;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .product-desc {
+      font-size: 0.78rem;
+      color: var(--sub);
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .product-price {
+      font-family: var(--mono);
+      font-size: 1rem;
+      color: var(--accent);
+      margin-top: 0.25rem;
+    }
+
+    .product-old {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--sub);
+      text-decoration: line-through;
+      margin-left: 0.4rem;
+    }
+
+    .product-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--sub);
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+      width: 100%;
+      margin-top: 0.25rem;
+    }
+
+    .product-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── Toast ─────────────────────────────────────────────── */
+    #toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--surface);
+      border: 1px solid var(--accent);
+      color: var(--text);
+      font-size: 0.83rem;
+      padding: 0.7rem 1.2rem;
+      border-radius: var(--radius);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.25s, transform 0.25s;
+      pointer-events: none;
+      z-index: 999;
+      font-family: var(--mono);
+    }
+
+    #toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Footer ─────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--sub);
+      font-size: 0.78rem;
+      font-family: var(--mono);
+      letter-spacing: 0.06em;
+    }
+
+    footer span { color: var(--accent); }
+
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      nav ul { display: none; }
+      .row-2 { grid-template-columns: 1fr; }
+      .hero { padding: 4rem 1.25rem 3rem; }
+      .section { padding: 3rem 1.25rem; }
+      .form-card { padding: 1.5rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Nav ─────────────────────────────────────────────────── -->
+<nav>
+  <a href="#" class="logo">ROD&amp;CO</a>
+  <ul>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#email">Newsletter</a></li>
+    <li><a href="#checkout">Checkout</a></li>
+  </ul>
+</nav>
+
+<!-- ── Hero ─────────────────────────────────────────────────── -->
+<div class="hero">
+  <p class="hero-eyebrow">Precision — Performance — Patience</p>
+  <h1>Gear built for<br /><span>serious water.</span></h1>
+  <p>Handpicked rods, reels, lures, and tackle for anglers who don't compromise. Every product, every cast.</p>
+</div>
+
+<!-- ── Email Collection ─────────────────────────────────────── -->
+<div class="section" id="email">
+  <p class="section-label">Stay in the loop</p>
+  <h2>Join the crew</h2>
+  <p class="section-sub">Early access to new drops, fishing reports, and gear reviews. No spam — unsubscribe any time.</p>
+
+  <div class="form-card">
+    <label for="name">Your name</label>
+    <input type="text" id="name" placeholder="e.g. Jordan Reeves" />
+
+    <label for="email">Email address</label>
+    <input type="email" id="email" placeholder="you@example.com" />
+
+    <label for="interest">Fishing style</label>
+    <select id="interest">
+      <option value="">— select one —</option>
+      <option>Fly fishing</option>
+      <option>Bass fishing</option>
+      <option>Deep sea / offshore</option>
+      <option>Ice fishing</option>
+      <option>Carp &amp; coarse</option>
+      <option>General / all-round</option>
+    </select>
+
+    <button class="btn" onclick="handleEmail()">Subscribe — it's free →</button>
   </div>
+</div>
+
+<!-- ── Payment Form (Demo) ───────────────────────────────────── -->
+<div class="section" id="checkout">
+  <p class="section-label">Checkout</p>
+  <h2>Payment details</h2>
+  <p class="section-sub">Secure, encrypted checkout. This form is a visual demo — no real transactions are processed.</p>
+
+  <div class="form-card">
+    <div class="demo-badge">⚠ Demo only — not a real gateway</div>
+
+    <label>Cardholder name</label>
+    <input type="text" placeholder="Name as on card" />
+
+    <label>Card number</label>
+    <input type="text" placeholder="•••• •••• •••• ••••" maxlength="19" />
+    <div class="card-icons">
+      <span class="card-icon">VISA</span>
+      <span class="card-icon">MC</span>
+      <span class="card-icon">AMEX</span>
+      <span class="card-icon">DISC</span>
+    </div>
+
+    <div class="row-2">
+      <div>
+        <label>Expiry</label>
+        <input type="text" placeholder="MM / YY" maxlength="7" />
+      </div>
+      <div>
+        <label>CVV</label>
+        <input type="text" placeholder="•••" maxlength="4" />
+      </div>
+    </div>
+
+    <label>Billing postcode</label>
+    <input type="text" placeholder="e.g. 75201" />
+
+    <label>Order total</label>
+    <input type="text" value="$148.97" readonly style="color:var(--accent);" />
+
+    <button class="btn btn-pay" onclick="handlePay()">Complete order →</button>
+  </div>
+</div>
+
+<!-- ── Product Grid ─────────────────────────────────────────── -->
+<div class="section" id="shop">
+  <p class="section-label">The range</p>
+  <h2>Fishing products</h2>
+  <p class="section-sub">A curated selection of rods, reels, lures, and tackle. Display only — items are not for sale.</p>
+
+  <div class="products-grid">
+
+    <div class="product-card">
+      <div class="product-img">🎣</div>
+      <div class="product-tag">Spinning Rod</div>
+      <div class="product-name">Coastal Pro 7'6" Medium-Heavy</div>
+      <div class="product-desc">IM8 graphite blank, fast action, EVA split-grip handle. Ideal for bass and inshore species.</div>
+      <div class="product-price">$129.99 <span class="product-old">$159</span></div>
+      <button class="product-btn">View details</button>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">🧲</div>
+      <div class="product-tag">Spinning Reel</div>
+      <div class="product-name">Vortex 4000 SX Reel</div>
+      <div class="product-desc">10+1 stainless bearings, 22 lb drag, IPX5 waterproof seal. 6.2:1 gear ratio.</div>
+      <div class="product-price">$89.00</div>
+      <button class="product-btn">View details</button>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">🪝</div>
+      <div class="product-tag">Soft Lure</div>
+      <div class="product-name">Riffle Shad 4" — Chartreuse</div>
+      <div class="product-desc">Ribbed body with forked paddle tail. Exceptional action at slow retrieve. Pack of 8.</div>
+      <div class="product-price">$8.49</div>
+      <button class="product-btn">View details</button>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">🦟</div>
+      <div class="product-tag">Fly Fishing</div>
+      <div class="product-name">Dry Fly Assortment — 36 Flies</div>
+      <div class="product-desc">Adams, Elk Hair Caddis, Blue Winged Olive, Parachute Ant. Sizes #12–#18. Hand-tied.</div>
+      <div class="product-price">$34.95 <span class="product-old">$42</span></div>
+      <button class="product-btn">View details</button>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">🧰</div>
+      <div class="product-tag">Tackle Box</div>
+      <div class="product-name">StormCase 5-Tray Pro</div>
+      <div class="product-desc">Waterproof ABS shell, 5 removable trays, side pockets, foam padding. Fits 1200+ items.</div>
+      <div class="product-price">$54.00</div>
+      <button class="product-btn">View details</button>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">🎏</div>
+      <div class="product-tag">Fly Reel</div>
+      <div class="product-name">Ridge Run CNC 5/6 Arbor Reel</div>
+      <div class="product-desc">Large arbor for fast line pickup. Die-cast aluminium, sealed disc drag. Matte black finish.</div>
+      <div class="product-price">$112.00 <span class="product-old">$135</span></div>
+      <button class="product-btn">View details</button>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">🪣</div>
+      <div class="product-tag">Live Bait</div>
+      <div class="product-name">Aerated Bait Bucket 5-Gal</div>
+      <div class="product-desc">Built-in aerator, clear lid, dual handles. Keeps bait lively for 12+ hours on one charge.</div>
+      <div class="product-price">$28.50</div>
+      <button class="product-btn">View details</button>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">🧶</div>
+      <div class="product-tag">Line</div>
+      <div class="product-name">NanoFuse 20 lb Braid — 300 yd</div>
+      <div class="product-desc">8-carrier ultra-braid, near-zero stretch, abrasion-resistant jacket. High-vis yellow.</div>
+      <div class="product-price">$22.99</div>
+      <button class="product-btn">View details</button>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">🌊</div>
+      <div class="product-tag">Offshore</div>
+      <div class="product-name">BlueFin Heavy Jig 200g — Sardine</div>
+      <div class="product-desc">Slow-pitch action vertical jig. Holographic finish, twin-assist hooks, 200g for deep drops.</div>
+      <div class="product-price">$18.75</div>
+      <button class="product-btn">View details</button>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">🧤</div>
+      <div class="product-tag">Apparel</div>
+      <div class="product-name">Sun Shield Gloves UPF 50+</div>
+      <div class="product-desc">Four-way stretch, touchscreen-compatible fingertips, moisture-wicking. One size fits most.</div>
+      <div class="product-price">$16.00</div>
+      <button class="product-btn">View details</button>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">🔦</div>
+      <div class="product-tag">Accessories</div>
+      <div class="product-name">Headlamp Pro 600 Lumen</div>
+      <div class="product-desc">Red / white modes, IPX6 rated, USB-C rechargeable. 12 hr run time on low. Essential for dawn starts.</div>
+      <div class="product-price">$31.00 <span class="product-old">$38</span></div>
+      <button class="product-btn">View details</button>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img">🧊</div>
+      <div class="product-tag">Ice Fishing</div>
+      <div class="product-name">Arctic Tip-Up Set — 4 Pack</div>
+      <div class="product-desc">Wind-resistant flag system, 50 lb spool, heat-treated wire. Packs flat for easy transport.</div>
+      <div class="product-price">$44.99</div>
+      <button class="product-btn">View details</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── Footer ─────────────────────────────────────────────────── -->
+<footer>
+  <span>ROD&amp;CO</span> · Display site only · All products and prices are fictional · © 2026
 </footer>
- 
+
+<!-- ── Toast ─────────────────────────────────────────────────── -->
+<div id="toast"></div>
+
+<script>
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 3200);
+  }
+
+  function handleEmail() {
+    const email = document.getElementById('email').value.trim();
+    if (!email || !email.includes('@')) {
+      showToast('⚠ Please enter a valid email address.');
+      return;
+    }
+    showToast('✓ Subscribed — welcome to the crew!');
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('interest').value = '';
+  }
+
+  function handlePay() {
+    showToast('⚠ Demo only — no payment was processed.');
+  }
+
+  // Format card number with spaces
+  document.querySelectorAll('input[placeholder="•••• •••• •••• ••••"]').forEach(el => {
+    el.addEventListener('input', e => {
+      let v = e.target.value.replace(/\D/g, '').substring(0, 16);
+      e.target.value = v.replace(/(.{4})/g, '$1 ').trim();
+    });
+  });
+
+  // Format expiry
+  document.querySelectorAll('input[placeholder="MM / YY"]').forEach(el => {
+    el.addEventListener('input', e => {
+      let v = e.target.value.replace(/\D/g, '').substring(0, 4);
+      if (v.length >= 3) v = v.slice(0,2) + ' / ' + v.slice(2);
+      e.target.value = v;
+    });
+  });
+</script>
+
 </body>
 </html>
